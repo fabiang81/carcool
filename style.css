@@ -1,0 +1,15 @@
+.car-card {
+    width: 250px;
+}
+
+.car-make{
+    font-style: italic;
+}
+
+.car-model{
+    font-weight: bold;
+}
+
+.car-make, .car-model {
+    color:#fff;
+}
