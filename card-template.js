@@ -9,6 +9,11 @@ function createCarCard(make, model, transmision, colors, price, year, bodystyles
         type = type + `<span class='badge tag-${colors[0]} float-right p-2 mx-1'>${colors[0]}</span>`;
     }
 
+    var bodylist = "";
+    for (var index = 0; index < bodystyles.length; index++) {
+        bodylist = bodylist + `<span class='badge tag-${bodystyles[index]} float-right p-2 mx-1'>${bodystyles[index]}</span>`;
+    }
+
     var html = `
     <div class='col-md-1-12'>
         <div class='card bg-light car-card m-3'>
@@ -47,7 +52,7 @@ function createCarCard(make, model, transmision, colors, price, year, bodystyles
                     </div>
                     <div class='col-12 border-right border-top text-center'>
                         <span class='spd-tag-title'>Body Styles:</span>
-                        <span class='spd-tag-value'>${bodystyles}</span>
+                        <span class='spd-tag-value'>${bodylist}</span>
                     </div>
                 </div>
             </div>

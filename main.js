@@ -37,7 +37,7 @@
         var fColors = unAuto.colors;
         var fPrice = unAuto.price;
         var fYear = unAuto.year;    
-        var fBodystyles = unAuto.bodystyles;
+        var fBodystyles = unAuto.body_styles;
 
         //Creo una tarjeta y la guardo dentro del HTML a mostrar
         tmpHTML = tmpHTML + createCarCard(fMake, fModel, fTransmision, fColors, fPrice, fYear, fBodystyles);
