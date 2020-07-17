@@ -20,6 +20,45 @@
     </nav>
 
     <div class="container">
+        <form>
+                <div class="form-group">
+                    <label for="year">Marca </label>
+                    <select class="custom-select">
+                        <option selected>Selecciona la marca</option>
+                        <option value="1">Chevrolet</option>
+                        <option value="2">Ford</option>
+                        <option value="3">Nissan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="year">Año: </label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline1">2019</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2">2020</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="presupuesto">Presupuesto </label>
+                    <input type="number" class="form-control" id="inputAddress" placeholder="Presupuesto" min="5000" max="150000">
+                </div>
+                <div class="form-group">
+                    <label for="presupuesto">Transmisión </label>
+                    <select class="custom-select">
+                        <option selected>Selecciona la transmisión</option>
+                        <option value="1">Manual</option>
+                        <option value="2">Automático</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+    </div>
+
+    <div class="container">
         <div id="carsList-container" class="row">
             <!-- Aqui contenido de la busqueda de Carros -->
         </div>
