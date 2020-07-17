@@ -9,54 +9,56 @@
 </head>
 <body>
     <!-- Nav menu -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-info">
-        <a class="navbar-brand" href="#">Carcool</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            </ul>
-        </div>
-    </nav>
+    <header class="container">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-info">
+            <a class="navbar-brand" href="#">Carcool</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <div class="container">
+    <main class="container">
         <form>
-                <div class="form-group">
-                    <label for="year">Marca </label>
-                    <select class="custom-select">
-                        <option selected>Selecciona la marca</option>
-                        <option value="1">Chevrolet</option>
-                        <option value="2">Ford</option>
-                        <option value="3">Nissan</option>
-                    </select>
+            <div class="form-group">
+                <label for="year">Marca </label>
+                <select class="custom-select">
+                    <option selected>Selecciona la marca</option>
+                    <option value="1">Chevrolet</option>
+                    <option value="2">Ford</option>
+                    <option value="3">Nissan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="year">Año: </label>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">2019</label>
                 </div>
-                <div class="form-group">
-                    <label for="year">Año: </label>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline1">2019</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">2020</label>
-                    </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">2020</label>
                 </div>
-                <div class="form-group">
-                    <label for="presupuesto">Presupuesto </label>
-                    <input type="number" class="form-control" id="inputAddress" placeholder="Presupuesto" min="5000" max="150000">
-                </div>
-                <div class="form-group">
-                    <label for="presupuesto">Transmisión </label>
-                    <select class="custom-select">
-                        <option selected>Selecciona la transmisión</option>
-                        <option value="1">Manual</option>
-                        <option value="2">Automático</option>
-                    </select>
-                </div>
+            </div>
+            <div class="form-group">
+                <label for="presupuesto">Presupuesto </label>
+                <input type="number" class="form-control" id="inputAddress" placeholder="Presupuesto" min="10000" max="150000">
+            </div>
+            <div class="form-group">
+                <label for="presupuesto">Transmisión </label>
+                <select class="custom-select">
+                    <option selected>Selecciona la transmisión</option>
+                    <option value="1">Manual</option>
+                    <option value="2">Automático</option>
+                </select>
+            </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
-          </form>
-    </div>
+        </form>
+    </main>
 
     <div class="container">
         <div id="carsList-container" class="row">
