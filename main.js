@@ -49,6 +49,8 @@
         }
         //Coloco todo el contenido generado en el HTML
         listaCarros.innerHTML=tmpHTML;
+        
+        event.preventDefault()
 
     });
 
