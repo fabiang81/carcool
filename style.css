@@ -119,10 +119,6 @@ body{
     font-weight: bold;
 }
 
-.price-tag-title{
-
-}
-
 .price-tag-value::before{
     content: '$';
 }
@@ -133,23 +129,4 @@ body{
     font-size: 13px;
 }
 
-.price-tag-value{
-
-}
-
-.transmission-tag-title{
-
-}
-
-.transmission-tag-value{
-
-}
-
-.bodyStyles-tag-title{
-
-}
-
-.bodyStyles-tag-value{
-
-}
 /* End Bottom Car Info*/
