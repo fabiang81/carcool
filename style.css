@@ -59,10 +59,12 @@ body{
 }
 
 .car-make{
+    font-size: 0.9rem;
     font-style: italic;
 }
 
 .car-model{
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -107,12 +109,12 @@ body{
 .bodyStyles-tag-title {
     font-style: italic;
     font-weight: bold;
-    font-size:13px;
+    font-size:10px;
     padding-top:5px;
 }
 
 .year-tag-value, .price-tag-value{
-    font-size:18px;
+    font-size:15px;
     font-weight: bold;
 }
 
@@ -128,6 +130,10 @@ body{
     display:block;
     content: 'MXN';
     font-size: 13px;
+}
+
+.badge{
+    font-size: 0.7em;
 }
 
 /* End Bottom Car Info*/
