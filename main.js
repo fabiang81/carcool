@@ -21,9 +21,9 @@
             let filtro = filterCars(make, year, budget, transmision);
 
             // Preparo el elemento donde se mostrará la información del filtro de carros
-            var listaCarros = document.getElementById('carsList-container');
-            listaCarros.innerHTML="";
-            var tmpHTML="";
+            document.getElementById('carsList-container').innerHTML="";
+            let listaCarros = document.getElementById('carsList-container');
+            let tmpHTML="";
 
             // Recorrer arreglo de carros filtrados
             for (var index = 0; index < filtro.length; index++) {
