@@ -6,7 +6,6 @@ body{
 .hero{
     background: url("./img/bg/background-car.jpg");
     background-size: cover;
-    background-position: bottom;
     height:600px;
     border-top: solid 3px #A400B4;
     margin:0px;
@@ -59,12 +58,12 @@ body{
 }
 
 .car-make{
-    font-size: 0.9rem;
+    font-size: 0.78rem;
     font-style: italic;
 }
 
 .car-model{
-    font-size: 0.9rem;
+    font-size: 0.78rem;
     font-weight: bold;
 }
 

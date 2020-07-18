@@ -35,59 +35,53 @@
     <div class="jumbotron jumbotron-fluid hero">
         <div class="container">
             <h1 class="display-3 text-light">Find your <br><span class="nextMatch">next Match</span></h1>
-            <p class="lead text-light">News & Used Cars</p>
+            <p class="lead text-light">New and Secondhand Cars</p>
         </div>
     </div>
 
     <div class="bg-primary-carcool">
-        <form class="container">
-            <div class="row car-selector">
-                <div class="column col-md-2">
-                    <div class="form-group">
-                        <select class="custom-select" id="makeSelect">
-                            <option selected>Brand</option>
+        <div class="container">
+            <form role="form" data-toggle="validator">
+                <div class="row car-selector">
+                    <div class="column col-md-2">
+                        <select class="custom-select form-group" id="makeSelect">
+                            <option selected disabled>Brand</option>
                             <option value="Chevrolet">Chevrolet</option>
                             <option value="Ford">Ford</option>
                             <option value="Nissan">Nissan</option>
                         </select>
                     </div>
-                </div>
 
-                <div class="column col-md-2">
-                    <div class="form-group">
-                        <select class="custom-select" id="yearSelect">
-                            <option selected>Year</option>
+                    <div class="column col-md-2">
+                        <select class="custom-select form-group" id="yearSelect">
+                            <option selected disabled>Year</option>
                             <option value="2019">2019</option>
                             <option value="2020">2020</option>
                         </select>
                     </div>
-                </div>
 
-                <div class="column col-md-2">
-                    <div class="form-group">
-                        <select class="custom-select" id="transmisionSelect">
-                            <option selected>Transmission</option>
+                    <div class="column col-md-2">
+                        <select class="custom-select form-group" id="transmisionSelect">
+                            <option selected disabled>Transmission</option>
                             <option value="manual">Manual</option>
                             <option value="auto">Automatic</option>
-                        </select>
+                         </select>
                     </div>
-                </div>
 
-                <div class="column col-md-4">
-                    <div class="form-group">
-                        <input id="budget" class="form-control-range" type="range" name="rangeInput" min="15000" max="150000" step="5000" onchange="updateBudgetValue(this.value)">
-                        <p class="budgetSliderTitle">Budget: $ <span id="budgetCurrentValue">85000</span></p>
+                    <div class="column col-md-4">
+                            <input id="budget" class="form-control-range form-group" type="range" name="rangeInput" min="15000" max="150000" step="5000" onchange="updateBudgetValue(this.value)">
+                            <p class="budgetSliderTitle">Budget: $ <span id="budgetCurrentValue">85000</span></p>
                     </div>
+
+
+
+                    <div class="column col-md-2">
+                        <button type="submit" class="btn btn-info" id="sendButton">Search</button>
+                    </div>
+
                 </div>
-
-
-
-                <div class="column col-md-2">
-                    <button type="submit" class="btn btn-info" id="sendButton">Search</button>
-                </div>
-
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 
     <main class="mainlist">

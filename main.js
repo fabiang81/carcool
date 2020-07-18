@@ -5,9 +5,10 @@
     function filterCars(make, model, budget, transmision){
         results = [];
         for(var i=0; i<carsList.length; i++){
-            var downPayment = carsList[i].price * 0.20;
+            var minus20perc = carsList[i].price * 0.20;
+            var plus20perc = carsList[i].price * 1.2;
             if(make === carsList[i].make && model == carsList[i].year && 
-                transmision === carsList[i].transmision && budget > downPayment){
+                transmision === carsList[i].transmision && (budget >= minus20perc && budget <= plus20perc)){
                 results.push(carsList[i]);
             }
         }
@@ -19,6 +20,7 @@
             let year = document.getElementById("yearSelect").value;
             let budget = parseInt(document.getElementById("budget").value);
             let transmision = document.getElementById("transmisionSelect").value;
+
             let filtro = filterCars(make, year, budget, transmision);
 
             // Preparo el elemento donde se mostrará la información del filtro de carros
