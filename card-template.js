@@ -17,7 +17,7 @@ function createCarCard(make, model, transmision, colors, price, year, bodystyles
     var html = `
     <div class='col-md-1-12'>
         <div class='card bg-light car-card m-3'>
-            <div class='card-header p-0 bg-info'>
+            <div class='card-header p-0 bg-primary-carcool'>
                 <div class='row m-0'>
                     <div class='col-8 my-auto'>
                         <span class='car-make'>${make}</span> 
