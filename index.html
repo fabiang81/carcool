@@ -9,66 +9,117 @@
 </head>
 <body>
     <!-- Nav menu -->
-    <header class="container">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-info">
-            <a class="navbar-brand" href="#">Carcool</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                </ul>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary-carcool">
+            <div class="container">
+                <a class="navbar-brand" href="#">Carcool</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#makeSelect">Find your Car</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#aboutModal"  data-toggle="modal" data-target="#aboutModal">About Us</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="container">
-        <form>
-            <div class="form-group">
-                <label for="year">Marca </label>
-                <select class="custom-select" id="makeSelect">
-                    <option selected>Selecciona la marca</option>
-                    <option value="Chevrolet">Chevrolet</option>
-                    <option value="Ford">Ford</option>
-                    <option value="Nissan">Nissan</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="year">Año: </label>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="yearRadioButton1" name="yearRadioButton" checked
-                    value="2019"
-                    class="custom-control-input">
-                    <label class="custom-control-label" for="yearRadioButton1">2019</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="yearRadioButton2" name="yearRadioButton"
-                    value="2020"
-                    class="custom-control-input">
-                    <label class="custom-control-label" for="yearRadioButton2">2020</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="presupuesto">Presupuesto </label>
-                <input type="number" class="form-control" id="budget" placeholder="Presupuesto" min="10000" max="150000">
-            </div>
-            <div class="form-group">
-                <label for="presupuesto">Transmisión </label>
-                <select class="custom-select" id="transmisionSelect">
-                    <option selected>Selecciona la transmisión</option>
-                    <option value="manual">Manual</option>
-                    <option value="auto">Automática</option>
-                </select>
-            </div>
-                <button type="submit" class="btn btn-primary" id="sendButton">Enviar</button>
-            </div>
-        </form>
-    </main>
-
-    <div class="container">
-        <div id="carsList-container" class="row">
-            <!-- Aqui contenido de la busqueda de Carros -->
+    <div class="jumbotron jumbotron-fluid hero">
+        <div class="container">
+            <h1 class="display-3 text-light">Find your <br><span class="nextMatch">next Match</span></h1>
+            <p class="lead text-light">News & Used Cars</p>
         </div>
     </div>
+
+    <div class="bg-primary-carcool">
+        <form class="container">
+            <div class="row car-selector">
+                <div class="column col-md-2">
+                    <div class="form-group">
+                        <select class="custom-select" id="makeSelect">
+                            <option selected>Brand</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Nissan">Nissan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="column col-md-2">
+                    <div class="form-group">
+                        <select class="custom-select" id="yearSelect">
+                            <option selected>Year</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="column col-md-2">
+                    <div class="form-group">
+                        <select class="custom-select" id="transmisionSelect">
+                            <option selected>Transmission</option>
+                            <option value="manual">Manual</option>
+                            <option value="auto">Automatic</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="column col-md-4">
+                    <div class="form-group">
+                        <input id="budget" class="form-control-range" type="range" name="rangeInput" min="15000" max="150000" step="5000" onchange="updateBudgetValue(this.value)">
+                        <p class="budgetSliderTitle">Budget: $ <span id="budgetCurrentValue">85000</span></p>
+                    </div>
+                </div>
+
+
+
+                <div class="column col-md-2">
+                    <button type="submit" class="btn btn-info" id="sendButton">Search</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <main class="mainlist">
+        <div class="container">
+            <div id="carsList-container" class="row col-centered">
+                <!-- Aqui contenido de la busqueda de Carros -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="aboutModalLabel">About CarCool</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Helping people to match with their dream car since 1998.</p>
+                    <p>Phone: 333-333-4400</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JS opcional de BootStrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -77,6 +128,7 @@
     <!-- JS personalizado para Carcool -->
     <script src="database.js"></script>
     <script src="card-template.js"></script>
+    <script src="utils.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

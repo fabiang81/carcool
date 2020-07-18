@@ -1,3 +1,59 @@
+body{
+    background-color:#2d2d2d;
+}
+
+/* Hero Banner */
+.hero{
+    background: url("./img/bg/background-car.jpg");
+    background-size: cover;
+    background-position: bottom;
+    height:600px;
+    border-top: solid 3px #A400B4;
+    margin:0px;
+}
+
+.nextMatch{
+    background-color:#A400B4;
+    padding:10px;
+    line-height: 2;
+}
+
+.lead {
+    font-style: italic;
+}
+/* End Hero Banner */
+
+.bg-primary-carcool{
+    background-color: #532380;
+}
+
+.bg-secondary-carcool{
+    background-color: #A400B4;
+}
+
+.text-primary-carcool{
+    color: #532380;
+}
+
+/* FORM */
+.car-selector{
+    padding-top:30px;
+    padding-bottom:10px;
+}
+
+.budgetSliderTitle{
+    color:white;
+}
+
+#budgetCurrentValue{
+    font-weight: bold;
+}
+/* END FORM*/
+
+#carsList-container{
+    margin-top:20px;
+}
+
 .car-card {
     width: 250px;
 }
@@ -13,3 +69,65 @@
 .car-make, .car-model {
     color:#fff;
 }
+
+.car-picture{
+    max-width: 210px;
+    margin-top:10px;
+}
+
+.tag-red{
+    background-color: red;
+}
+
+.tag-black{
+    background-color: #333;
+}
+
+.tag-white{
+    background-color: #fff;
+}
+
+.tag-blue {
+    background-color: blue;
+}
+
+.tag-blue, .tag-red, .tag-black {
+    color:white;
+}
+
+/* Bottom Car Info */
+
+.year-tag-title, .price-tag-title, .transmission-tag-title{
+    font-style: italic;
+    font-weight: bold;
+    font-size:13px;
+    display:block;
+}
+
+.bodyStyles-tag-title {
+    font-style: italic;
+    font-weight: bold;
+    font-size:13px;
+    padding-top:5px;
+}
+
+.year-tag-value, .price-tag-value{
+    font-size:18px;
+    font-weight: bold;
+}
+
+.transmission-tag-value{
+    font-weight: bold;
+}
+
+.price-tag-value::before{
+    content: '$';
+}
+
+.price-tag-value::after{
+    display:block;
+    content: 'MXN';
+    font-size: 13px;
+}
+
+/* End Bottom Car Info*/

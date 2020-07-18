@@ -17,7 +17,7 @@ function createCarCard(make, model, transmision, colors, price, year, bodystyles
     var html = `
     <div class='col-md-1-12'>
         <div class='card bg-light car-card m-3'>
-            <div class='card-header p-0 bg-info'>
+            <div class='card-header p-0 bg-primary-carcool'>
                 <div class='row m-0'>
                     <div class='col-8 my-auto'>
                         <span class='car-make'>${make}</span> 
@@ -34,25 +34,25 @@ function createCarCard(make, model, transmision, colors, price, year, bodystyles
                     ${type}
                     </div>
                 </div>
-                <img class='pokepicture' src='tmp.png' alt='${model}'>
+                <img class='car-picture' src='./img/ghostVehicleLarge.jpg' alt='${model}'>
             </div>
             <div class='card-footer text-muted p-0'>
                 <div class='row m-0'>
-                    <div class='col-4 border-right text-center'>
-                        <span class='hp-tag-title'>Year:</span>
-                        <span class='hp-tag-value'>${year}</span>
+                    <div class='col-4 border-right text-center px-1'>
+                        <span class='year-tag-title text-primary-carcool'>Year:</span>
+                        <span class='year-tag-value'>${year}</span>
                     </div>
-                    <div class='col-4 border-right text-center'>
-                        <span class='atk-tag-title'>Price:</span>
-                        <span class='atk-tag-value'>${price}</span>
+                    <div class='col-4 border-right text-center px-1'>
+                        <span class='price-tag-title text-primary-carcool'>Price:</span>
+                        <span class='price-tag-value'>${price}</span>
                     </div>
-                    <div class='col-4 border-right text-center'>
-                        <span class='def-tag-title'>Transmision:</span>
-                        <span class='def-tag-value'>${transmision}</span>
+                    <div class='col-4 border-right text-center px-1'>
+                        <span class='transmission-tag-title text-primary-carcool'>Trans.:</span>
+                        <span class='transmission-tag-value'>${transmision}</span>
                     </div>
-                    <div class='col-12 border-right border-top text-center'>
-                        <span class='spd-tag-title'>Body Styles:</span>
-                        <span class='spd-tag-value'>${bodylist}</span>
+                    <div class='col-12 border-right border-top text-center px-2 d-flex justify-content-between'>
+                        <span class='bodyStyles-tag-title text-primary-carcool'>Body Styles:</span>
+                        <span class='bodyStyles-tag-value'>${bodylist}</span>
                     </div>
                 </div>
             </div>
