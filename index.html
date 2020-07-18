@@ -9,8 +9,8 @@
 </head>
 <body>
     <!-- Nav menu -->
-    <header class="container">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-info">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary-carcool">
             <a class="navbar-brand" href="#">Carcool</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
                 aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -21,54 +21,77 @@
         </nav>
     </header>
 
-    <main class="container">
-        <form>
-            <div class="form-group">
-                <label for="year">Marca </label>
-                <select class="custom-select" id="makeSelect">
-                    <option selected>Selecciona la marca</option>
-                    <option value="Chevrolet">Chevrolet</option>
-                    <option value="Ford">Ford</option>
-                    <option value="Nissan">Nissan</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="year">Año: </label>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="yearRadioButton1" name="yearRadioButton" checked
-                    value="2019"
-                    class="custom-control-input">
-                    <label class="custom-control-label" for="yearRadioButton1">2019</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="yearRadioButton2" name="yearRadioButton"
-                    value="2020"
-                    class="custom-control-input">
-                    <label class="custom-control-label" for="yearRadioButton2">2020</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="presupuesto">Presupuesto </label>
-                <input type="number" class="form-control" id="budget" placeholder="Presupuesto" min="10000" max="150000">
-            </div>
-            <div class="form-group">
-                <label for="presupuesto">Transmisión </label>
-                <select class="custom-select" id="transmisionSelect">
-                    <option selected>Selecciona la transmisión</option>
-                    <option value="manual">Manual</option>
-                    <option value="auto">Automática</option>
-                </select>
-            </div>
-                <button type="submit" class="btn btn-primary" id="sendButton">Enviar</button>
-            </div>
-        </form>
-    </main>
-
-    <div class="container">
-        <div id="carsList-container" class="row">
-            <!-- Aqui contenido de la busqueda de Carros -->
+    <div class="jumbotron jumbotron-fluid hero">
+        <div class="container">
+            <h1 class="display-3 text-light">Find your next Match</h1>
+            <p class="lead text-light">News & Used Cars</p>
         </div>
     </div>
+
+    <div class="bg-primary-carcool">
+        <form class="container">
+            <div class="row car-selector">
+                <div class="column col-md-3">
+                    <div class="form-group">
+                        <select class="custom-select" id="makeSelect">
+                            <option selected>Selecciona la marca</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Nissan">Nissan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="column col-md-2">
+                    <div class="form-group">
+                        <label for="year" class="anio">Año: </label>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="yearRadioButton1" name="yearRadioButton" checked
+                            value="2019"
+                            class="custom-control-input">
+                            <label class="custom-control-label" for="yearRadioButton1">2019</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="yearRadioButton2" name="yearRadioButton"
+                            value="2020"
+                            class="custom-control-input">
+                            <label class="custom-control-label" for="yearRadioButton2">2020</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column col-md-2">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="budget" placeholder="Presupuesto" min="10000" max="150000">
+                    </div>
+                </div>
+
+                <div class="column col-md-3">
+                    <div class="form-group">
+                        <select class="custom-select" id="transmisionSelect">
+                            <option selected>Selecciona la transmisión</option>
+                            <option value="manual">Manual</option>
+                            <option value="auto">Automática</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="column col-md-2">
+                    <button type="submit" class="btn btn-primary" id="sendButton">Enviar</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <main class="mainlist">
+        <div class="container">
+            <div id="carsList-container" class="row col-centered">
+                <!-- Aqui contenido de la busqueda de Carros -->
+            </div>
+        </div>
+    </main>
+
 
     <!-- JS opcional de BootStrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
