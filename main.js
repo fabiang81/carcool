@@ -1,6 +1,5 @@
 (function(){
     'use strict';
-
     var results = [];
 
     function filterCars(make, model, budget, transmision){
@@ -24,7 +23,7 @@
         }else if(radio2.checked){
             year = radio2.value;
         }
-        let budget = document.getElementById("budget").value;
+        let budget = parseInt(document.getElementById("budget").value);
         let transmision = document.getElementById("transmisionSelect").value;
 
         var filtro = filterCars(make, year, budget, transmision);
@@ -53,6 +52,5 @@
         event.preventDefault()
 
     });
-
 
 })();

@@ -62,7 +62,8 @@
 
                 <div class="column col-md-2">
                     <div class="form-group">
-                        <input type="number" class="form-control" id="budget" placeholder="Budget" min="10000" max="150000">
+                        <input id="budget" class="form-control-range" type="range" name="rangeInput" min="15000" max="150000" step="5000" onchange="updateBudgetValue(this.value)">
+                        <p class="budgetSliderTitle">Budget: $ <span id="budgetCurrentValue">85000</span></p>
                     </div>
                 </div>
 
@@ -100,6 +101,7 @@
     <!-- JS personalizado para Carcool -->
     <script src="database.js"></script>
     <script src="card-template.js"></script>
+    <script src="utils.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
