@@ -3,6 +3,7 @@
     var results = [];
 
     function filterCars(make, model, budget, transmision){
+        results = [];
         for(var i=0; i<carsList.length; i++){
             var downPayment = carsList[i].price * 0.20;
             if(make === carsList[i].make && model == carsList[i].year && 
