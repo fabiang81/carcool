@@ -34,7 +34,7 @@ function createCarCard(make, model, transmision, colors, price, year, bodystyles
                     ${type}
                     </div>
                 </div>
-                <img class='pokepicture' src='tmp.png' alt='${model}'>
+                <img class='car-picture' src='./img/ghostVehicleLarge.jpg' alt='${model}'>
             </div>
             <div class='card-footer text-muted p-0'>
                 <div class='row m-0'>
