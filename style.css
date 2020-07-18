@@ -41,13 +41,6 @@ body{
     padding-bottom:10px;
 }
 
-.anio {display:block}
-
-.car-picture{
-    max-width: 210px;
-    margin-top:10px;
-}
-
 .budgetSliderTitle{
     color:white;
 }
@@ -55,8 +48,11 @@ body{
 #budgetCurrentValue{
     font-weight: bold;
 }
-
 /* END FORM*/
+
+#carsList-container{
+    margin-top:20px;
+}
 
 .car-card {
     width: 250px;
@@ -72,6 +68,11 @@ body{
 
 .car-make, .car-model {
     color:#fff;
+}
+
+.car-picture{
+    max-width: 210px;
+    margin-top:10px;
 }
 
 .tag-red{
