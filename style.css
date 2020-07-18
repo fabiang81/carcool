@@ -38,6 +38,7 @@ body{
 }
 
 /* END FORM*/
+
 .car-card {
     width: 250px;
 }
@@ -73,3 +74,63 @@ body{
 .tag-blue, .tag-red, .tag-black {
     color:white;
 }
+
+/* Bottom Car Info */
+
+.year-tag-title, .price-tag-title, .transmission-tag-title{
+    font-style: italic;
+    font-weight: bold;
+    font-size:13px;
+    display:block;
+}
+
+.bodyStyles-tag-title {
+    font-style: italic;
+    font-weight: bold;
+    font-size:13px;
+    padding-top:5px;
+}
+
+.year-tag-value, .price-tag-value{
+    font-size:18px;
+    font-weight: bold;
+}
+
+.transmission-tag-value{
+    font-weight: bold;
+}
+
+.price-tag-title{
+
+}
+
+.price-tag-value::before{
+    content: '$';
+}
+
+.price-tag-value::after{
+    display:block;
+    content: 'MXN';
+    font-size: 13px;
+}
+
+.price-tag-value{
+
+}
+
+.transmission-tag-title{
+
+}
+
+.transmission-tag-value{
+
+}
+
+.bodyStyles-tag-title{
+
+}
+
+.bodyStyles-tag-value{
+
+}
+/* End Bottom Car Info*/
