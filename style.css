@@ -11,6 +11,16 @@ body{
     border-top: solid 3px #A400B4;
     margin:0px;
 }
+
+.nextMatch{
+    background-color:#A400B4;
+    padding:10px;
+    line-height: 2;
+}
+
+.lead {
+    font-style: italic;
+}
 /* End Hero Banner */
 
 .bg-primary-carcool{
