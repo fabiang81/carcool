@@ -28,6 +28,7 @@ body{
 /* FORM */
 .car-selector{
     padding-top:30px;
+    padding-bottom:10px;
 }
 
 .anio {display:block}

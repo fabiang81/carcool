@@ -31,7 +31,7 @@
     <div class="bg-primary-carcool">
         <form class="container">
             <div class="row car-selector">
-                <div class="column col-md-3">
+                <div class="column col-md-2">
                     <div class="form-group">
                         <select class="custom-select" id="makeSelect">
                             <option selected>Brand</option>
@@ -44,30 +44,15 @@
 
                 <div class="column col-md-2">
                     <div class="form-group">
-                        <label for="year" class="anio">Year: </label>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="yearRadioButton1" name="yearRadioButton" checked
-                            value="2019"
-                            class="custom-control-input">
-                            <label class="custom-control-label" for="yearRadioButton1">2019</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="yearRadioButton2" name="yearRadioButton"
-                            value="2020"
-                            class="custom-control-input">
-                            <label class="custom-control-label" for="yearRadioButton2">2020</label>
-                        </div>
+                        <select class="custom-select" id="yearSelect">
+                            <option selected>Year</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="column col-md-2">
-                    <div class="form-group">
-                        <input id="budget" class="form-control-range" type="range" name="rangeInput" min="15000" max="150000" step="5000" onchange="updateBudgetValue(this.value)">
-                        <p class="budgetSliderTitle">Budget: $ <span id="budgetCurrentValue">85000</span></p>
-                    </div>
-                </div>
-
-                <div class="column col-md-3">
                     <div class="form-group">
                         <select class="custom-select" id="transmisionSelect">
                             <option selected>Transmission</option>
@@ -76,6 +61,15 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="column col-md-4">
+                    <div class="form-group">
+                        <input id="budget" class="form-control-range" type="range" name="rangeInput" min="15000" max="150000" step="5000" onchange="updateBudgetValue(this.value)">
+                        <p class="budgetSliderTitle">Budget: $ <span id="budgetCurrentValue">85000</span></p>
+                    </div>
+                </div>
+
+
 
                 <div class="column col-md-2">
                     <button type="submit" class="btn btn-info" id="sendButton">Search</button>

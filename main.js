@@ -15,14 +15,7 @@
 
     document.getElementById("sendButton").addEventListener("click", function(){
         let make = document.getElementById("makeSelect").value;
-        let year;
-        let radio1 = document.getElementById("yearRadioButton1");
-        let radio2 = document.getElementById("yearRadioButton2");
-        if(radio1.checked){
-            year = radio1.value;
-        }else if(radio2.checked){
-            year = radio2.value;
-        }
+        let year = document.getElementById("yearSelect").value;
         let budget = parseInt(document.getElementById("budget").value);
         let transmision = document.getElementById("transmisionSelect").value;
 
