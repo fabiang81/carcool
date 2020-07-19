@@ -146,6 +146,10 @@ footer a:hover{
     color: #A400B4;
 }
 
+footer {
+    margin-top:30px;
+}
+
 /* Responsive on Small Devices */
 @media (max-width: 992px) { 
     .single-car-card{
