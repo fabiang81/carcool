@@ -134,5 +134,26 @@ body{
 .badge{
     font-size: 0.7em;
 }
-
 /* End Bottom Car Info*/
+
+/* Footer */
+footer a {
+    font-weight: bold;
+    color: #fff;
+}
+
+footer a:hover{
+    color: #A400B4;
+}
+
+footer {
+    margin-top:30px;
+}
+
+/* Responsive on Small Devices */
+@media (max-width: 992px) { 
+    .single-car-card{
+        margin-right: auto!important;
+        margin-left: auto!important;
+    }
+}
